@@ -17,6 +17,7 @@ import ArticleCard from "components/ArticleCard";
 import SubscriptionCard from "components/SubscriptionCard";
 import LandingPageFooter from "components/LandingPageFooter";
 import { useNavigate } from "react-router-dom";
+import AcsCallComposite from "../../components/C2CWidget/acsCallComposite";
 
 const LandingPagePage = () => {
   const navigate = useNavigate();
@@ -628,6 +629,7 @@ const LandingPagePage = () => {
           homev1HomevTwo_Eighteen="Create Account"
           staticmania2022="© 2022. All rights reserved."
         />
+        <AcsCallComposite></AcsCallComposite>
       </div>
     </>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "pages/Home";
 import NotFound from "pages/NotFound";
+import AcsCallComposite from "components/C2CWidget/acsCallComposite";
 const License = React.lazy(() => import("pages/License"));
 const PrivacyPolicy = React.lazy(() => import("pages/PrivacyPolicy"));
 const FAQ = React.lazy(() => import("pages/FAQ"));
@@ -16,12 +17,14 @@ const ListingMapView = React.lazy(() => import("pages/ListingMapView"));
 const Listing = React.lazy(() => import("pages/Listing"));
 const AboutUs = React.lazy(() => import("pages/AboutUs"));
 const LandingPage = React.lazy(() => import("pages/LandingPage"));
+
 const ProjectRoutes = () => {
   return (
     <React.Suspense fallback={<>Loading...</>}>
       <Router>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/acscall" element={<AcsCallComposite />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/listing" element={<Listing />} />

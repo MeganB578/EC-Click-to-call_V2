@@ -52,21 +52,21 @@
     box-shadow: 0px 10px 20px rgba(120, 120, 120, 0.4);
   }
 
-  .ms-Button {
+  .ms-Button[type='button'] {
     border-radius: 10px;
   }
-  .root-237 {
+  .root-237[type='button'] {
     background-color: black !important;
   }
-  .root-237:hover {
+  .root-237[type='button']:hover {
     background-color: rgb(164, 46, 67) !important;
   }
-  .ms-Button--primary {
+  .ms-Button--primary[type='button'] {
     background-color: black !important;
     border: 0;
     color: white;
   }
-  .ms-Button--primary:hover {
+  .ms-Button--primary[type='button']:hover {
     border: 0;
     background-color: var(--deep_orange_400) !important;
   }

@@ -19,6 +19,7 @@ jobs:
         with:
           submodules: true
       - name: NPM Install
+        id: npminstall
         with:
           command: npm install --force
       - name: Build And Deploy

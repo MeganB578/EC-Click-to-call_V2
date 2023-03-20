@@ -8,14 +8,14 @@ import {
 import { initializeIcons } from '@fluentui/react';
 import React, { useEffect, useRef, useState } from 'react';
 
-const DISPLAY_NAME = 'Demo User';
+const DISPLAY_NAME = 'Ilya Bukshteyn';
 const ACS_USER_IDS = {participantIDs: ['8:orgid:c4cc1167-cb4b-4ce4-b621-73758d904d6a'] };
 
 initializeIcons();
 
 const AcsCallComposite = () => {	
 	const [c2cOpen, setc2cOpen] = useState(false);
-	const [widgetButtonText, setwidgetButtonText] = useState("Call");
+	const [widgetButtonText, setwidgetButtonText] = useState("Call Agent");
 	const [widgetAreaClass, setwidgetAreaClass] = useState("widgetAreaCallNone");
 	const [callAdapterArgs, setCallAdapterArgs] = useState({});
 	const [credential, setCredential] = useState({});
@@ -23,12 +23,12 @@ const AcsCallComposite = () => {
 	const activateC2CWidget = () => {
 		setc2cOpen(!c2cOpen);
 		if(c2cOpen) {
-			setwidgetButtonText("Call");
-			setwidgetAreaClass("widgetAreaCallNone")
+			setwidgetButtonText("Call Agent");
+			setwidgetAreaClass("widgetAreaCallNone");
 		}
 		else {
-			setwidgetButtonText("End");
-			setwidgetAreaClass("widgetAreaCallBlock")
+			setwidgetButtonText("End Call");
+			setwidgetAreaClass("widgetAreaCallBlock");
 		}
 	};
 

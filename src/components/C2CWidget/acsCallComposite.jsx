@@ -27,7 +27,7 @@ const AcsCallComposite = () => {
 			setwidgetAreaClass("widgetAreaCallNone");
 		}
 		else {
-			setwidgetButtonText("End Call");
+			setwidgetButtonText("Close");
 			setwidgetAreaClass("widgetAreaCallBlock");
 		}
 	};
@@ -49,7 +49,7 @@ const AcsCallComposite = () => {
 		getAzureCommunicationServiceArgs();
 	  }, []);
 
-	  const callAdapter = useAzureCommunicationCallAdapter(callAdapterArgs);
+	  const callAdapter = useAzureCommunicationCallAdapter(callAdapterArgs, undefined, leaveCall);
 	  if (callAdapter) {
 		return (
 		<div>
@@ -74,6 +74,11 @@ const AcsCallComposite = () => {
 		</div>
 	);
 
+	async function leaveCall() {
+		await callAdapter.leaveCall().catch(e => {
+			console.error('Failed to leave the call', e);
+		});
+	}
 };
 
 async function getChatContext(){
@@ -82,4 +87,4 @@ async function getChatContext(){
 	return data;
   }
 
-  export default AcsCallComposite;
+export default AcsCallComposite;

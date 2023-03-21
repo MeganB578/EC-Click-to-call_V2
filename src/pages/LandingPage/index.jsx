@@ -60,7 +60,7 @@ const LandingPagePage = () => {
             language="Property "
             otherspages="Blog"
             search="Search"
-            log_In="Log in"
+            log_In="Ilya B."
           />
           <div className="bg-yellow_50 flex font-manrope items-start justify-start pl-[120px] sm:pl-[20px] md:pl-[40px] py-[50px] w-[100%]">
             <div className="flex md:flex-col flex-row gap-[100px] md:gap-[40px] items-center justify-start ml-[auto] w-[100%]">

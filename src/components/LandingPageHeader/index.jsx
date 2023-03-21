@@ -103,7 +103,7 @@ const LandingPageHeader = (props) => {
               </a>
             </li>
           </ul>
-          <div className="flex flex-row gap-[40px] h-[42px] md:h-[auto] sm:hidden items-center justify-start w-[228px]">
+          <div className="flex flex-row gap-[40px] h-[42px] md:h-[auto] sm:hidden items-center justify-start w-[300px]">
             <Button
               className="bg-transparent cursor-pointer flex items-center justify-center min-w-[94px] w-[auto]"
               leftIcon={
@@ -119,9 +119,10 @@ const LandingPageHeader = (props) => {
               </div>
             </Button>
             <Button
-              className="common-pointer bg-gray_900 cursor-pointer font-manrope font-semibold sm:px-[20px] px-[24px] py-[13px] rounded-[10px] text-[16px] text-center text-white_A700 w-[100%]"
+              className="common-pointer cursor-pointer font-manrope font-semibold sm:px-[20px] px-[24px] py-[13px] rounded-[10px] text-[20px] text-center text-gray_900 w-[100%]"
               onClick={handleOpenLogInModal}
             >
+              <img src="/images/IlyaB.jpg" className="rounded-full w-[32px] h-[32px] inline mr-[12px]"></img>
               {props?.log_In}
             </Button>
           </div>

@@ -74,3 +74,10 @@
   .ms-Dropdown-title {
     padding-top: 8px;
   }
+
+  .body-130, .css-221, .css-222, .css-233 {
+    background-color: var(--gray_300);
+  }
+  .css-213 {
+    background-color: var(--gray_301);
+  }

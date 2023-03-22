@@ -48,9 +48,18 @@ const AcsCallComposite = () => {
 	
 		getAzureCommunicationServiceArgs();
 	  }, []);
+	
+	const onAfterAdapterCreated = useCallback((adapter) => {
+		adapter.on('callEnded', async () => {
+			setc2cOpen(false);
+			setwidgetButtonText("Call Agent");
+			setwidgetAreaClass("widgetAreaCallNone");
+		});
+		return adapter;
+	}, []);
 
-	  const callAdapter = useAzureCommunicationCallAdapter(callAdapterArgs, undefined, leaveCall);
-	  if (callAdapter) {
+	const callAdapter = useAzureCommunicationCallAdapter(callAdapterArgs, onAfterAdapterCreated, leaveCall);
+	if (callAdapter) {
 		return (
 		<div>
 			<button className="widgetButton" onClick={activateC2CWidget}>

@@ -6,7 +6,7 @@ import {
   useAzureCommunicationCallAdapter
 } from '@azure/communication-react';
 import { initializeIcons } from '@fluentui/react';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 
 const DISPLAY_NAME = 'Ilya Bukshteyn';
 const ACS_USER_IDS = {participantIDs: ['8:orgid:c4cc1167-cb4b-4ce4-b621-73758d904d6a'] };
